@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, LogIn } from "lucide-react";
+import logo from '../assets/logo.png';
+import Login from "../pages/authPage"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +13,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full overflow-hidden">
+          <div className="w-auto h-15 overflow-hidden">
             <img
-              src="/logo.png"
+              src={logo}
               alt="TwendeTech Logo"
               className="w-full h-full object-cover"
             />
@@ -31,10 +33,12 @@ const Navbar = () => {
 
         {/* Log In Button (Desktop Only) */}
         <div className="hidden md:block ml-4">
-          <button className="bg-white text-black rounded-full px-5 py-2 shadow-md hover:bg-gray-100 flex items-center">
-            <LogIn className="mr-2 h-4 w-4" />
-            Log In
-          </button>
+ <Link to="/login">
+ <button className="bg-white text-black rounded-full px-5 py-2 shadow-md hover:bg-gray-100 flex items-center">
+ <LogIn className="mr-2 h-4 w-4" />
+ Log In
+ </button>
+ </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -54,13 +58,14 @@ const Navbar = () => {
             <Link to="/programs" onClick={toggleMenu}>Programs</Link>
             <Link to="/volunteer" onClick={toggleMenu}>Volunteer</Link>
             <Link to="/partnerships" onClick={toggleMenu}>Partnerships</Link>
-            <button
-              onClick={toggleMenu}
-              className="bg-black text-white rounded-full px-5 py-2 mt-2 flex items-center justify-center"
-            >
-              <LogIn className="mr-2 h-4 w-4" />
-              Log In
-            </button>
+ <Link
+ to="/login"
+ onClick={toggleMenu}
+ className="bg-black text-white rounded-full px-5 py-2 mt-2 flex items-center justify-center"
+ >
+ <LogIn className="mr-2 h-4 w-4" />
+ Log In
+ </Link>
           </nav>
         </div>
       )}
