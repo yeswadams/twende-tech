@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, X, LogIn } from "lucide-react";
 import Logo from "../assets/logo.png";
 
@@ -19,31 +19,56 @@ const Navbar = () => {
 
         {/* Desktop Nav Menu */}
         <nav className="hidden md:flex items-center gap-6 text-white font-medium text-sm sm:text-base bg-white/20 backdrop-blur-md border border-white/40 rounded-full px-6 py-2 shadow-md">
-          <Link to="/" className="hover:text-white/80">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-red-500" : "hover:text-white/80"
+            }
+          >
             Home
-          </Link>
-          <Link to="/about" className="hover:text-white/80">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-red-500" : "hover:text-white/80"
+            }
+          >
             About
-          </Link>
-          <Link to="/programs" className="hover:text-white/80">
+          </NavLink>
+          <NavLink
+            to="/programs"
+            className={({ isActive }) =>
+              isActive ? "text-red-500" : "hover:text-white/80"
+            }
+          >
             Programs
-          </Link>
-          <Link to="/volunteer" className="hover:text-white/80">
+          </NavLink>
+          <NavLink
+            to="/volunteer"
+            className={({ isActive }) =>
+              isActive ? "text-red-500" : "hover:text-white/80"
+            }
+          >
             Volunteer
-          </Link>
-          <Link to="/partnerships" className="hover:text-white/80">
+          </NavLink>
+          <NavLink
+            to="/partnerships"
+            className={({ isActive }) =>
+              isActive ? "text-red-500" : "hover:text-white/80"
+            }
+          >
             Partnerships
-          </Link>
+          </NavLink>
         </nav>
 
         {/* Log In Button (Desktop Only) */}
         <div className="hidden md:block ml-4">
-          <Link to="/login">
+          <NavLink to="/login">
             <button className="bg-white text-black rounded-full px-5 py-2 shadow-md hover:bg-gray-100 flex items-center">
               <LogIn className="mr-2 h-4 w-4" />
               Log In
             </button>
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Menu Icon */}
