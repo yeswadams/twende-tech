@@ -24,7 +24,7 @@ const AuthPage = () => {
           </button>
           <button
             onClick={() => setShowLogin(false)}
-            className={`px-4 py-2 rounded-l-sm ${
+            className={`px-4 py-2 rounded-r-sm ${
               !showLogin
                 ? "bg-blue-600 text-white"
                 : "bg-white text-black border"
