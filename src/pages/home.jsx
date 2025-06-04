@@ -2,6 +2,9 @@ import React from 'react';
 import Hero from '../components/hero';
 import HowItWorks from '../components/howItWorks'
 import WhyTwendeTech from '../components/WhyTwendeTech'
+import CareerPathPreview from '../components/CareerPathPreview'
+import Testimonials from '../components/testimonials'
+import Blogs from '../components/blogs'
 
 const home = () => {
   return (
@@ -9,17 +12,10 @@ const home = () => {
       <Hero />
       {/* How It Works Section */}
       <HowItWorks /> 
-      
       <WhyTwendeTech />
-
-      {/* Career Path Preview Section */}
-      {/* <CareerPathPreview /> */}
-
-      {/* Testimonials Section */}
-      {/* <Testimonials /> */}
-
-      {/* App Preview Section */}
-      {/* <AppPreview /> */}
+      <CareerPathPreview /> 
+      <Testimonials /> 
+      <Blogs />
 
     </>
   );
