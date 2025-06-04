@@ -8,7 +8,7 @@
 
  
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(27, 27, 27, 0.87);
   background-color: #f4f5f6;
 
   font-synthesis: none;
@@ -49,5 +49,6 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }

@@ -1,15 +1,16 @@
-import React from 'react'
-import Hero from '../components/hero'
+import React from 'react';
+import Hero from '../components/hero';
+import HowItWorks from '../components/howItWorks'
+import WhyTwendeTech from '../components/WhyTwendeTech'
 
 const home = () => {
   return (
     <>
       <Hero />
       {/* How It Works Section */}
-      {/* <HowItWorks /> */}
-
-      {/* Why TwendeTech? Section */}
-      {/* <WhyTwendeTech /> */}
+      <HowItWorks /> 
+      
+      <WhyTwendeTech />
 
       {/* Career Path Preview Section */}
       {/* <CareerPathPreview /> */}
