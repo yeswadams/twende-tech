@@ -1,15 +1,15 @@
 import React from 'react';
 
-const BlogCard = ({ image, title, description, author, date }) => (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <img src={image} alt={title} className=" w-full rounded-t-lg object-cover mb-4" />
-      <p className="text-sm text-gray-500">{title}</p>
-      <h4 className="mt-2 font-bold text-lg">{description}</h4>
-      <p className="text-gray-700 italic">"{author}"</p>
-      <p className="text-gray-700 italic">"{date}"</p>
-    </div>
 
+const BlogCard = ({ image, title, excerpt, author }) => (
+  <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+    <img src={image} alt={title} className="w-full h-48 object-cover" />
+    <div className="p-4">
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-gray-600 text-sm mt-2">{excerpt}</p>
+      <p className="text-sm mt-4 text-blue-600 font-medium">By {author}</p>
+    </div>
+  </div>
 );
-  
 
 export default BlogCard;

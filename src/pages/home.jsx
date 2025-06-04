@@ -5,6 +5,7 @@ import WhyTwendeTech from '../components/WhyTwendeTech'
 import CareerPathPreview from '../components/CareerPathPreview'
 import Testimonials from '../components/testimonials'
 import Blogs from '../components/blogs'
+import Footer from '../components/footer'
 
 const home = () => {
   return (
@@ -16,6 +17,7 @@ const home = () => {
       <CareerPathPreview /> 
       <Testimonials /> 
       <Blogs />
+      <Footer />
 
     </>
   );

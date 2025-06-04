@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Desktop Login */}
         <div className="hidden md:block ml-4">
           <NavLink to="/login">
-            <button className="bg-white text-black rounded-full px-5 py-2 shadow-md hover:bg-gray-100 flex items-center">
+            <button className="cursor-pointer bg-white text-black rounded-full px-5 py-2 shadow-md hover:bg-gray-100 flex items-center">
               <LogIn className="mr-2 h-4 w-4" />
               Log In
             </button>
