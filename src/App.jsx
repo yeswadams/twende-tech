@@ -3,6 +3,7 @@ import Home from './pages/home';
 import Login from './pages/authPage';
 import Results from './pages/results';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 import About from './pages/aboutPage';
 import Programs from './pages/programsPage';
 import Volunteer from './pages/volunteerPage';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/results" element={<Results />} />
       </Routes>
+      {location.pathname !== '/login' && <Footer/> }
     </>
   );
 }
